@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using Taxi.Web.Data;
 using Taxi.Web.Data.Entities;
 using Taxi.Web.Helpers;
@@ -35,6 +37,7 @@ namespace Taxi.Web
             });
 
             services.AddIdentity<UserEntity, IdentityRole>(cfg =>
+
             {
                 cfg.User.RequireUniqueEmail = true;
                 cfg.Password.RequireDigit = false;
@@ -44,7 +47,19 @@ namespace Taxi.Web
                 cfg.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<DataContext>();
 
+            services.AddAuthentication()
+                .AddCookie()
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = Configuration["Tokens:Issuer"],
+                        ValidAudience = Configuration["Tokens:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
+                    };
+                });
             services.AddDbContext<DataContext>(cfg =>
+
             {
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
