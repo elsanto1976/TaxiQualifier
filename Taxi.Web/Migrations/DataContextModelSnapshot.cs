@@ -185,7 +185,7 @@ namespace Taxi.Web.Migrations
                     b.Property<string>("Remarks");
 
                     b.Property<string>("Source")
-                        .HasMaxLength(100);
+                        .HasMaxLength(500);
 
                     b.Property<double>("SourceLatitude");
 
@@ -194,7 +194,7 @@ namespace Taxi.Web.Migrations
                     b.Property<DateTime>("StartDate");
 
                     b.Property<string>("Target")
-                        .HasMaxLength(100);
+                        .HasMaxLength(500);
 
                     b.Property<double>("TargetLatitude");
 

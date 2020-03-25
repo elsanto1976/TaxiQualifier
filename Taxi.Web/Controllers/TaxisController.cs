@@ -18,7 +18,6 @@ namespace Taxi.Web.Controllers
         {
             _context = context;
         }
-
         // GET: Taxis
         public async Task<IActionResult> Index()
         {
