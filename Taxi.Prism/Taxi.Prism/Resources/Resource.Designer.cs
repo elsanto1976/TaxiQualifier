@@ -88,7 +88,7 @@ namespace Taxi.Prism.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check the internet connection..
+        ///   Looks up a localized string similar to Check the internet connection.
         /// </summary>
         public static string ConnectionError {
             get {
@@ -165,6 +165,15 @@ namespace Taxi.Prism.Resources {
         public static string Plaque {
             get {
                 return ResourceManager.GetString("Plaque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plaque.
+        /// </summary>
+        public static string PlaqueError {
+            get {
+                return ResourceManager.GetString("PlaqueError", resourceCulture);
             }
         }
         

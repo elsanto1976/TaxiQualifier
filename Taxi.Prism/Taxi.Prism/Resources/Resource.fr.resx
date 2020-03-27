@@ -163,7 +163,7 @@
     <value>Score</value>
   </data>
   <data name="Remarks" xml:space="preserve">
-    <value>Remarques :</value>
+    <value>Remarques </value>
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Chargement...</value>
@@ -175,7 +175,7 @@
     <value>Nouveau déplacement</value>
   </data>
   <data name="SeeTaxiHistory" xml:space="preserve">
-    <value>Voir l&amp;#39;historique des taxis!</value>
+    <value>Voir historique des taxis</value>
   </data>
   <data name="AdminMyUserGroup" xml:space="preserve">
     <value>Admin mon groupe d&amp;#39;utilisateurs!</value>

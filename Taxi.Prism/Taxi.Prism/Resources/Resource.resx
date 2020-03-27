@@ -133,7 +133,7 @@
     <value>The plaque must start with three letters and end with three numbers.</value>
   </data>
   <data name="ConnectionError" xml:space="preserve">
-    <value>Check the internet connection.</value>
+    <value>Check the internet connection</value>
   </data>
   <data name="Plaque" xml:space="preserve">
     <value>Plaque</value>
@@ -185,5 +185,8 @@
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>Log in</value>
+  </data>
+  <data name="PlaqueError" xml:space="preserve">
+    <value>Plaque</value>
   </data>
 </root>
