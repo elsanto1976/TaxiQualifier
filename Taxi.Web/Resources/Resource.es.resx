@@ -160,10 +160,10 @@
     <value>ha solicitado que sea miembro de su grupo de usuarios en la aplicación TAXI.</value>
   </data>
   <data name="WishToAccept" xml:space="preserve">
-    <value>Si desea aceptar, haga clic aquí:</value>
+    <value>Si desea aceptar, haga clic aqui</value>
   </data>
   <data name="WishToReject" xml:space="preserve">
-    <value>Si desea rechazar, haga clic aquí:</value>
+    <value>Si desea aceptar, haga clic aqui</value>
   </data>
   <data name="Confirm" xml:space="preserve">
     <value>Confirmar</value>
@@ -172,6 +172,6 @@
     <value>Rechazar</value>
   </data>
   <data name="RequestJoinGroupEmailSent" xml:space="preserve">
-    <value>Se ha enviado un correo electrónico al usuario con su solicitud, ¡esperamos a que responda pronto!</value>
+    <value>Se ha enviado un correo electrónico al usuario con su solicitud, ¡esperamos a que responda pronto</value>
   </data>
 </root>

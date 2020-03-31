@@ -124,7 +124,7 @@
     <value>Aceptar</value>
   </data>
   <data name="PlaqueError" xml:space="preserve">
-    <value>¡Debes entrar en una placa!</value>
+    <value>¡Debes entrar en una placa</value>
   </data>
   <data name="TaxiHistory" xml:space="preserve">
     <value>Historia del taxi</value>

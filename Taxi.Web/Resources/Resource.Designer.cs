@@ -160,7 +160,7 @@ namespace Taxi.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An email has been sent to the user with your request, we hope to respond soon!.
+        ///   Looks up a localized string similar to An email has been sent to the user with your request, we hope to respond soon.
         /// </summary>
         public static string RequestJoinGroupEmailSent {
             get {
@@ -214,7 +214,7 @@ namespace Taxi.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you wish to accept, click here: .
+        ///   Looks up a localized string similar to If you wish to accept, click here.
         /// </summary>
         public static string WishToAccept {
             get {

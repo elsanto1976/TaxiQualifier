@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Taxi.Web.Data;
 
 namespace Taxi.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200331004139_update databae")]
+    partial class updatedatabae
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -185,7 +187,7 @@ namespace Taxi.Web.Migrations
                     b.Property<string>("Remarks");
 
                     b.Property<string>("Source")
-                        .HasMaxLength(600);
+                        .HasMaxLength(500);
 
                     b.Property<double>("SourceLatitude");
 
@@ -194,7 +196,7 @@ namespace Taxi.Web.Migrations
                     b.Property<DateTime>("StartDate");
 
                     b.Property<string>("Target")
-                        .HasMaxLength(600);
+                        .HasMaxLength(500);
 
                     b.Property<double>("TargetLatitude");
 

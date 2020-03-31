@@ -145,7 +145,7 @@
     <value>ABC123</value>
   </data>
   <data name="CheckPlaque" xml:space="preserve">
-    <value>Vérifiez la plaque!</value>
+    <value>Vérifiez la plaque</value>
   </data>
   <data name="Qualification" xml:space="preserve">
     <value>Qualification</value>
@@ -178,7 +178,7 @@
     <value>Voir historique des taxis</value>
   </data>
   <data name="AdminMyUserGroup" xml:space="preserve">
-    <value>Admin mon groupe d&amp;#39;utilisateurs!</value>
+    <value>Admin mon groupe utilisateurs</value>
   </data>
   <data name="ModifyUser" xml:space="preserve">
     <value>Modifier l'utilisateur</value>
