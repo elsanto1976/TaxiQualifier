@@ -7,7 +7,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--  Parameters  -->
-            <x:String x:Key="UrlAPI">https://taxifar.azurewebsites.net/</x:String>
+            <x:String x:Key="UrlAPI">https://taxiwebnala.azurewebsites.net/</x:String>
             <!--  Colors  -->
             <Color x:Key="ColorBackgroud">#F2BE22</Color>
             <Color x:Key="ColorPrimary">#3726A6</Color>
@@ -22,7 +22,7 @@
             <Style TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource ColorAccent}" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="CornerRadius" Value="9" />
                 <Setter Property="TextColor" Value="{StaticResource ColorFontInverse}" />
             </Style>
 

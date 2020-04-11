@@ -127,7 +127,7 @@
     <value>Correo de confirmación</value>
   </data>
   <data name="EmailConfirmationBody" xml:space="preserve">
-    <value>Para habilitar al usuario, haga clic en este enlace:</value>
+    <value>Para habilitar al usuario, haga clic en este enlace</value>
   </data>
   <data name="EmailConfirmationSent" xml:space="preserve">
     <value>Se envió un correo electrónico de confirmación. Confirme su cuenta e inicie sesión en la aplicación.</value>
