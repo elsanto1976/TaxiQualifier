@@ -163,7 +163,7 @@
     <value>Si vous souhaitez accepter, cliquez ici</value>
   </data>
   <data name="WishToReject" xml:space="preserve">
-    <value>Si vous souhaitez refuser, cliquez ici</value>
+    <value>Si vous souhaitez refuser cliquez ici.</value>
   </data>
   <data name="Confirm" xml:space="preserve">
     <value>Confirmer</value>
