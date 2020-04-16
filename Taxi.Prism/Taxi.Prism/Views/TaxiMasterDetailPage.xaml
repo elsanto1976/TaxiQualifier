@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage
-    x:Class="Taxi.Prism.Views.TaxiMasterDetailPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-    xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True">
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                  xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="Taxi.Prism.Views.TaxiMasterDetailPage">
+
 
     <MasterDetailPage.Resources>
         <Style TargetType="ListView">
@@ -33,7 +33,7 @@
                            Source="taxi"/>
                     <ffimageloading:CachedImage x:Name="Picture" 
                                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Logo,Property=Y,Factor=1,Constant=30}"
-                                                Aspect="AspectFit"
+                                                Aspect="AspectFill"
                                                 Source="{Binding User.PictureFullPath}" 
                                                 CacheDuration= "50"
                                                 HeightRequest="100"
@@ -42,6 +42,7 @@
                                                 RetryDelay= "600"
                                                 WidthRequest="100">
                         <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation />
                         </ffimageloading:CachedImage.Transformations>
                     </ffimageloading:CachedImage>
                     <Label RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Picture,Property=Y,Factor=1,Constant=110}"

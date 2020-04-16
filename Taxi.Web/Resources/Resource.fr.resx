@@ -127,7 +127,7 @@
     <value>Envoyer confirmation par e-mail</value>
   </data>
   <data name="EmailConfirmationBody" xml:space="preserve">
-    <value>Pour autoriser utilisateur</value>
+    <value>Pour autoriser utilisateur:</value>
   </data>
   <data name="EmailConfirmationSent" xml:space="preserve">
     <value>Un e-mail de confirmation a été envoyé. Veuillez confirmer votre compte et vous connecter application.</value>
@@ -163,7 +163,7 @@
     <value>Si vous souhaitez accepter, cliquez ici</value>
   </data>
   <data name="WishToReject" xml:space="preserve">
-    <value>Si vous souhaitez refuser cliquez ici.</value>
+    <value>Si vous souhaitez refuser cliquez ici: </value>
   </data>
   <data name="Confirm" xml:space="preserve">
     <value>Confirmer</value>

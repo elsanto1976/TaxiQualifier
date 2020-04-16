@@ -20,7 +20,7 @@ namespace Taxi.Prism
 
         protected override async void OnInitialized()
         {
-            SyncfusionLicenseProvider.RegisterLicense("MjE2NDMxQDMxMzcyZTM0MmUzMGErNTAvcWpqZjJCeG5mcnFTNDM5Rng0ZDZsRWRSb2Fkc0VpV1hXdmRXaTg9");
+            SyncfusionLicenseProvider.RegisterLicense("MjQxMDY1QDMxMzgyZTMxMmUzMGJNVG5lczdnMi9Yd0VYUWJ0SnJRYXJJN0xjNDJ6cGEzbHQrMFFlZUh3UnM9");
             InitializeComponent();
 
             await NavigationService.NavigateAsync("/TaxiMasterDetailPage/NavigationPage/HomePage");

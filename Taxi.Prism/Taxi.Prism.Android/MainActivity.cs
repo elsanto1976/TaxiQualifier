@@ -11,10 +11,11 @@ using Syncfusion.SfRating.XForms.Droid;
 namespace Taxi.Prism.Droid
 {
     [Activity(
-        Label = "Taxi", 
-        Icon = "@mipmap/ic_launcher", 
-        Theme = "@style/MainTheme", 
-        MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        Label = "Taxi",
+        Icon = "@mipmap/ic_launcher",
+        Theme = "@style/MainTheme",
+        MainLauncher = false,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -26,18 +27,20 @@ namespace Taxi.Prism.Droid
 
             CrossCurrentActivity.Current.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             new SfBusyIndicatorRenderer();
             new SfRatingRenderer();
+            Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
- 
 
     public class AndroidInitializer : IPlatformInitializer
     {
@@ -47,4 +50,3 @@ namespace Taxi.Prism.Droid
         }
     }
 }
-
