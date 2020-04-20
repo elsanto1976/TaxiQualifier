@@ -15,54 +15,35 @@ namespace Taxi.Prism.Helpers
             DependencyService.Get<ILocalize>().SetLocale(ci);
         }
 
+        public static string UserUpdated => Resource.UserUpdated;
         public static string Culture { get; set; }
+        public static string Save => Resource.Save;
+        public static string ChangePassword => Resource.ChangePassword;
         public static string PasswordRecover => Resource.PasswordRecover;
-
         public static string ForgotPassword => Resource.ForgotPassword;
         public static string PictureSource => Resource.PictureSource;
-
         public static string Cancel => Resource.Cancel;
-
         public static string FromCamera => Resource.FromCamera;
-
         public static string FromGallery => Resource.FromGallery;
         public static string Ok => Resource.Ok;
         public static string Email => Resource.Email;
-
-
         public static string Logout => Resource.Logout;
         public static string Address => Resource.Address;
-
         public static string AddressError => Resource.AddressError;
-
         public static string AddressPlaceHolder => Resource.AddressPlaceHolder;
-
         public static string Phone => Resource.Phone;
-
         public static string PhoneError => Resource.PhoneError;
-
         public static string PhonePlaceHolder => Resource.PhonePlaceHolder;
-
         public static string RegisterAs => Resource.RegisterAs;
-
         public static string RegisterAsError => Resource.RegisterAsError;
-
         public static string RegisterAsPlaceHolder => Resource.RegisterAsPlaceHolder;
-
         public static string PasswordConfirm => Resource.PasswordConfirm;
-
         public static string PasswordConfirmError1 => Resource.PasswordConfirmError1;
-
         public static string PasswordConfirmError2 => Resource.PasswordConfirmError2;
-
         public static string PasswordConfirmPlaceHolder => Resource.PasswordConfirmPlaceHolder;
-
         public static string User => Resource.User;
-
         public static string DocumentError => Resource.DocumentError;
-
         public static string FirstNameError => Resource.FirstNameError;
-
         public static string LastNameError => Resource.LastNameError;
         public static string LoginError => Resource.LoginError;
         public static string EmailPlaceHolder => Resource.EmailPlaceHolder;
