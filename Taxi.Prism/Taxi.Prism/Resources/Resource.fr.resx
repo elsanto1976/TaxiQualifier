@@ -288,4 +288,22 @@
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="PictureSource" xml:space="preserve">
+    <value>Où voulez-vous obtenir la photo?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="FromCamera" xml:space="preserve">
+    <value>FromCamera </value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>FromGallery</value>
+  </data>
+  <data name="PasswordRecover" xml:space="preserve">
+    <value>Retrouver son mot de passe </value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Mot de passe oublié ?</value>
+  </data>
 </root>

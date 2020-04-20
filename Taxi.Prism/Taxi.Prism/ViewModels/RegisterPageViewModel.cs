@@ -1,4 +1,6 @@
-﻿using Prism.Commands;
+﻿using Plugin.Media;
+using Plugin.Media.Abstractions;
+using Prism.Commands;
 using Prism.Navigation;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -15,6 +17,8 @@ namespace Taxi.Prism.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IRegexHelper _regexHelper;
         private readonly IApiService _apiService;
+        private readonly IFilesHelper _filesHelper;
+        private MediaFile _file;
         private ImageSource _image;
         private UserRequest _user;
         private Role _role;
@@ -22,15 +26,19 @@ namespace Taxi.Prism.ViewModels
         private bool _isRunning;
         private bool _isEnabled;
         private DelegateCommand _registerCommand;
+        private DelegateCommand _changeImageCommand;
 
         public RegisterPageViewModel(
             INavigationService navigationService,
             IRegexHelper regexHelper,
-            IApiService apiService) : base(navigationService)
+            IApiService apiService,
+            IFilesHelper filesHelper)
+            : base(navigationService)
         {
             _navigationService = navigationService;
             _regexHelper = regexHelper;
             _apiService = apiService;
+            _filesHelper = filesHelper;
             Title = Languages.Register;
             Image = App.Current.Resources["UrlNoImage"].ToString();
             IsEnabled = true;
@@ -39,7 +47,7 @@ namespace Taxi.Prism.ViewModels
         }
 
         public DelegateCommand RegisterCommand => _registerCommand ?? (_registerCommand = new DelegateCommand(RegisterAsync));
-
+        public DelegateCommand ChangeImageCommand => _changeImageCommand ?? (_changeImageCommand = new DelegateCommand(ChangeImageAsync));
         public ImageSource Image
         {
             get => _image;
@@ -95,6 +103,13 @@ namespace Taxi.Prism.ViewModels
                 return;
             }
 
+            byte[] imageArray = null;
+            if (_file != null)
+            {
+                imageArray = _filesHelper.ReadFully(_file.GetStream());
+            }
+
+            User.PictureArray = imageArray;
             User.UserTypeId = Role.Id;
             User.CultureInfo = Languages.Culture;
             Response response = await _apiService.RegisterUserAsync(url, "/api", "/Account", User);
@@ -110,6 +125,49 @@ namespace Taxi.Prism.ViewModels
             await App.Current.MainPage.DisplayAlert(Languages.Ok, response.Message, Languages.Accept);
             await _navigationService.GoBackAsync();
         }
+        private async void ChangeImageAsync()
+        {
+            await CrossMedia.Current.Initialize();
+
+            string source = await Application.Current.MainPage.DisplayActionSheet(
+                Languages.PictureSource,
+                Languages.Cancel,
+                null,
+                Languages.FromGallery,
+                Languages.FromCamera);
+
+            if (source == Languages.Cancel)
+            {
+                _file = null;
+                return;
+            }
+
+            if (source == Languages.FromCamera)
+            {
+                _file = await CrossMedia.Current.TakePhotoAsync(
+                    new StoreCameraMediaOptions
+                    {
+                        Directory = "Sample",
+                        Name = "test.jpg",
+                        PhotoSize = PhotoSize.Small,
+                    }
+                );
+            }
+            else
+            {
+                _file = await CrossMedia.Current.PickPhotoAsync();
+            }
+
+            if (_file != null)
+            {
+                Image = ImageSource.FromStream(() =>
+                {
+                    System.IO.Stream stream = _file.GetStream();
+                    return stream;
+                });
+            }
+        }
+
 
         private async Task<bool> ValidateDataAsync()
         {

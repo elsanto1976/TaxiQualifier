@@ -27,6 +27,9 @@
                         <ffimageloading:CachedImage.Transformations>
                             <fftransformations:CircleTransformation />
                         </ffimageloading:CachedImage.Transformations>
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                        </ffimageloading:CachedImage.GestureRecognizers>
                     </ffimageloading:CachedImage>
 
                     <Grid>
@@ -83,7 +86,7 @@
                                Grid.Column="1"
                                Placeholder="{i18n:Translate AddressPlaceHolder}"
                                Text="{Binding User.Address}"/>
-                        
+
                         <Label Grid.Row="4"
                                Grid.Column="0"
                                Text="{i18n:Translate Email}"
