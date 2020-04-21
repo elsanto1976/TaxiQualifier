@@ -314,4 +314,34 @@
   <data name="UserUpdated" xml:space="preserve">
     <value>User Updated Succefully.</value>
   </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>ConfirmNewPassword</value>
+  </data>
+  <data name="ConfirmNewPasswordError" xml:space="preserve">
+    <value>You must confirm new password confirmation</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>The new password and the confimation does not match</value>
+  </data>
+  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter the confimation for new password</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>You must enter your password </value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter your current password</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>You must enter a new password</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter a new password</value>
+  </data>
 </root>

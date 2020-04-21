@@ -315,4 +315,34 @@
   <data name="UserUpdated" xml:space="preserve">
     <value>Utilisateur mis à jour avec succès.</value>
   </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>CONFIRMNEWPASSWORD</value>
+  </data>
+  <data name="ConfirmNewPasswordError" xml:space="preserve">
+    <value>Vous devez confirmer la confirmation du nouveau mot de passe</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>Le nouveau mot de passe et la confimation ne correspondent pas</value>
+  </data>
+  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <value>Entrez la confimation pour le nouveau mot de passe</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Mot de passe actuel</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>Vous devez saisir votre mot de passe </value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Saisissez votre mot de passe actuel</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>'Vous devez entrer un nouveau mot de passe</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Entrez un nouveau mot de passe</value>
+  </data>
 </root>
